@@ -3,7 +3,7 @@
 2. create controller end extends widgteControler
 3. Create an end of widget entity copy this code into this entity
 
-
+```
 <?php
 
 namespace App\Entity;
