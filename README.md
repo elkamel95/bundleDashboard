@@ -434,6 +434,6 @@ comme ça :
   </entity>
 
 ````
-6. php/consle doctrine:schema:updtat --force 
+6. php bin/console doctrine:schema:updtat --force 
 7. run serve 
 
