@@ -404,6 +404,36 @@ api_platform:
    
 
 ````
-5. php/consle doctrine:schema:updtat --force 
-6. run serve 
+5. create an xml file with the name configEntity and copy this code into this file
+````
+<entities>
+ <entity  identifier ="" name= "" enterpoint = "" value="">
+
+    <attribute name ="" header=""  value="" type=""> </attribute>
+<! -- Si l’objet de type Array et liste est statique nous définissons la liste
+Statiquement comme ça 
+    <attribute name ="" value="" type="">
+
+     <property name=""  value="" ></property >
+      <property name="" value=""></property >
+      ......
+    </attribute>
+ -->
+
+<! -- Si l’objet de type Array et liste est dynamique nous définissons la liste
+comme ça : 
+   <attribute name ="" enterpoint = ""    value="" type="">
+      <property name=""  value="" ></property >
+   </attribute>
+ -->
+
+
+   <attribute name = "" value="" type="" session_value="" session_name="">
+</attribute>
+
+  </entity>
+
+````
+6. php/consle doctrine:schema:updtat --force 
+7. run serve 
 
