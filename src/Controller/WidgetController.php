@@ -15,7 +15,7 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
 
-class WidgetCustomController extends AbstractController
+class WidgetController extends AbstractController
 {
   protected $entityClass = Widget::class;
    /**
