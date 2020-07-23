@@ -379,11 +379,31 @@ $this->setPositionLeft('');
       return $this;
   }
 }
+````
+4. copy this code into "api_platform.yaml"
+````
+api_platform:
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+     # Default value
+    collection:
+            pagination:
+                items_per_page_parameter_name: itemsPerPage # Default value
+                client_items_per_page: true # Disabled by default
+                enabled: true
+                page_parameter_name: page
+                client_enabled: true
+    swagger:
+         api_keys:
+             apiKey:
+                name: Authorization
+                type: header
 
-4) config api platform 
-copy this code in api config 
 
-migrate entity with cli command : 
-migrate entity or doctrine:schema:updtat --force 
-5) run serve 
+    # The list of enabled error formats. The first one will be the default.
+   
+
+````
+5. php/consle doctrine:schema:updtat --force 
+6. run serve 
 
