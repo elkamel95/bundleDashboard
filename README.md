@@ -1,5 +1,5 @@
-# bundleDashboard
-1)install : composer require generic/dashboard
+# bundleServeurDashboard
+##1)install : composer require generic/dashboard
 2) create controller end extends widgteControler
 3)create entity Widget end copy this code in to 
 
