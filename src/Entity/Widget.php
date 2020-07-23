@@ -14,7 +14,7 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\BooleanFilter;
  * @ApiResource()
   * @ApiFilter(DateFilter::class, properties={"create_at","updateAt"})
  * @ApiFilter(SearchFilter::class, properties={"id": "exact", "name_fr": "partial",
- *  "name_fr": "word_start" ,"name_en":"word_start","type":"exact","users.id":"exact"})
+ *  "name_fr": "word_start" ,"name_en":"word_start","type":"exact"})
  * @ApiFilter(OrderFilter::class, properties={"updateAt","create_at","type"})
  * @ApiFilter(BooleanFilter::class, properties={"visible"})
 
@@ -124,10 +124,7 @@ class Widget
      */
     private $size;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="widgets")
-     */
-    private $users;
+ 
 
     public function getId(): ?int
     {
@@ -361,15 +358,5 @@ $this->setPositionLeft('');
 
 }
 
-  public function getUsers(): ?User
-  {
-      return $this->users;
-  }
 
-  public function setUsers(?User $users): self
-  {
-      $this->users = $users;
-
-      return $this;
-  }
 }
